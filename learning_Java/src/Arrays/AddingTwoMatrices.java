@@ -11,9 +11,16 @@ public class AddingTwoMatrices {
             }
         }
 
-        for (int i = 0;i<A.length;i++) {
+        /*for (int i = 0;i<A.length;i++) {
             for(int j=0;j<A[i].length;j++) {
                 System.out.print(C[i][j]+ " ");
+            }
+            System.out.println();
+        }*/
+
+        for (int []x: C) { //using enhanced for loop to print the 2d array
+            for(int y: x) {
+                System.out.print(y+" ");
             }
             System.out.println();
         }
