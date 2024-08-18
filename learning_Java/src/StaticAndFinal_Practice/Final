@@ -1,0 +1,14 @@
+Final variables
+1. these are constants, once value is assigned, we cannot change them.
+2. Final variable names are written in capital
+3. Final variables can be initialized in 3 ways:
+    1. when the variable is declared
+    2. We can initialize it inside a static block
+    3. we can initialize them inside the constructor
+        if using this method, then we have to initialize it in every constructor
+
+Final Methods
+1. Final method cannot be over ridden in the child class
+
+Final Classes
+1. A final class cannot be extended / inherited.

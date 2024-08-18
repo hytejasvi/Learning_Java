@@ -1,0 +1,8 @@
+1. Static methos can access only static variables or other static methods of the class.
+2. Static methods belog to a class and they can be accessed using objects or directly by class name
+3. this and super keywords cannot be used in static context.
+
+Static blocks:
+1. static blocks can only access static variables and methods.
+2. Static blocks cacn be used to initialize variables
+3. Once the class get's loaded, the static blocks gets executed first, in the order in which they are written.
