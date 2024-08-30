@@ -8,27 +8,32 @@ class MyThreads extends Thread {
     @Override
     public void run() {
         int i=1;
-        while (true) {
+        while (i!=50) {
             System.out.println(Thread.currentThread().getName()+" "+i+" "+Thread.currentThread().getState());
             i++;
-            /*try {
-                Thread.sleep(1000);
+            try {
+                Thread.sleep(100);
                 System.out.println(Thread.currentThread().getState());
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }*/
+            }
         }
     }
 }
 public class ThreadStates {
     public static void main(String[] args) throws InterruptedException {
-        Thread t = new MyThreads("Thread Tejas");//creating object of Thread class,
+        Thread t = new MyThreads("1st Thread");//creating object of Thread class,
+        Thread t2 = new MyThreads("2nd Thread");//creating object of Thread class,
         // and also passing/creating the obj of MyThreads class.
         //naming the thread to Thread Tejas
         t.setDaemon(true);
+        t2.setDaemon(true);
         t.start();
+        t2.start();
+        t.join();
+        t2.join();
         //t.interrupt();// if the thread has wait or sleep, then the main thread will interrupt that state.
-        try{Thread.sleep(10);} catch(Exception e){};
+        //try{Thread.sleep(10);} catch(Exception e){};
 
         System.out.println("t.getName(): "+t.getName());
         System.out.println("t.getId(): "+t.getId());
