@@ -26,10 +26,8 @@ public class Example1 {
         if(arr.length ==0) {
             return -1;
         }
-        boolean isAscending = false;
-        if (arr[0] < arr[arr.length-1]) {
-            isAscending = true;
-        }
+        boolean isAscending = arr[0] < arr[arr.length - 1];
+        //Above check is to determine if the given array is ascending or descending.
         int start = 0;
         int end = arr.length-1;
         System.out.println(Arrays.toString(arr));
@@ -37,6 +35,9 @@ public class Example1 {
         while (start <= end) {
             int mid = start + (end-start)/2;
 
+            if (key == arr[mid]) {
+                return mid+1;
+            }
             if (isAscending) {
                 if (key < arr[mid]) {
                     end = mid-1;
@@ -49,9 +50,6 @@ public class Example1 {
                 } else if (key < arr[mid]) {
                     start = mid+1;
                 }
-            }
-            if (key == arr[mid]) {
-                return mid+1;
             }
         }
         return -1;
