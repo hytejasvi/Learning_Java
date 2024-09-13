@@ -1,0 +1,14 @@
+
+This is a sample test message line1 
+This is a sample test message line2 
+This is a sample test message line3 
+This is a sample test message line4Finished Writing using getBytes() 
+
+This is a sample test message line1 
+This is a sample test message line2 
+This is a sample test message line3 
+This is a sample test messagFinished Writing using int b 
+ a sample test message line1 
+This is a sample test message line2 
+This is a sample test message line3 
+This is a sample test message line4Finished Writing using byte b[], int off, int len 
