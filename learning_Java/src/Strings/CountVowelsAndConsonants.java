@@ -24,14 +24,22 @@ public class CountVowelsAndConsonants {
     }
 
     private static void countVowelsAndConsonants1(String input) {
-        String words = input.replaceAll("[^A-Za-z]","");
-        Pattern vowels = Pattern.compile("[aeiouAEIOU]");
-        Matcher vowelsMatcher = vowels.matcher(input);
-        int vowelsCount = 0;
+        String words = input.replaceAll("[^A-Za-z]","").toLowerCase();
+        if (words.trim().isEmpty()) {
+            System.out.println();
+        }
+        Pattern vowels = Pattern.compile("[aeiou]");
+        Matcher vowelsMatcher = vowels.matcher(words);
+        Pattern consonants = Pattern.compile("[bcdfghjklmnpqrstvwxyz]");
+        Matcher consonantsMatcher = consonants.matcher(words);
+        int vowelsCount = 0, consonantsCount =0;
         while (vowelsMatcher.find()) {
             vowelsCount++;
         }
+        while (consonantsMatcher.find()) {
+            consonantsCount++;
+        }
         System.out.println("Vowels: "+vowelsCount);
-        System.out.println("Consonants: "+(words.length()-vowelsCount));
+        System.out.println("Consonants: "+consonantsCount);
     }
 }
