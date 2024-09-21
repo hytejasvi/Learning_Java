@@ -55,7 +55,13 @@ public class ListDemo {
         // it also gives previous index and next index
         it.nextIndex(); //Returns the index of the element that would be returned by next() call.
         while (it.hasNext()) {
-            System.out.print(it.next()+" ");
+            System.out.println("it.next() : "+it.nextIndex());
+            System.out.println(it.next()+" ");
+        }
+        System.out.println();
+        while (it.hasPrevious()) {
+            System.out.println("it.previousIndex() : "+it.previousIndex());
+            System.out.println(it.previous()+" ");
         }
         System.out.println();
     }
